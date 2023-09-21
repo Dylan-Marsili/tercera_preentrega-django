@@ -4,7 +4,7 @@ class Curso(models.Model):
     nombre = models.CharField(max_length=40)
     camada = models.IntegerField()
 
-class Estudiante(models.Model):
+class Cliente(models.Model):
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=20)
     email = models.EmailField(max_length=40)
