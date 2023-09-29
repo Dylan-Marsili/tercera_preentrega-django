@@ -1,0 +1,12 @@
+{% extends "AppClinica/base.html" %}
+{% load static %}
+
+{% block sections %}
+<h1>Citas</h1>
+{% for cita in citas %}
+<ul>
+    <li>Nombre: {{cita.nombrep}}</li>
+    <li>Fecha: {{cita.fecha}}</li>
+</ul>
+{% endfor %}
+{% endblock %}

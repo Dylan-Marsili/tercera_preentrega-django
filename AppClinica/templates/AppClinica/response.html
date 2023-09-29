@@ -1,0 +1,39 @@
+{% extends "AppClinica/base.html" %}
+{% load static %}
+
+{% block sections %}
+<p>Buscando {{type}}</p>
+
+{% if clientes %}
+    Clientes con email: {{email}}
+    {% for cliente in clientes %}
+        <ul>
+            <li>Nombre: {{cliente.nombre}}</li>
+            <li>Apellido: {{cliente.apellido}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+{% if empleados %}
+    Empleados con cargo: {{cargo}}
+    {% for empleado in empleados %}
+        <ul>
+            <li>Nombre: {{empleado.nombre}}</li>
+            <li>Apellido: {{empleado.apellido}}</li>
+            <li>Email: {{empleado.email}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+{% if citas %}
+    Citas con nombre: {{nombrep}}
+    {% for cita in citas %}
+        <ul>
+            <li>Nombre: {{cita.nombrep}}</li>
+            <li>Fecha: {{cita.fecha}}</li>
+        </ul>
+    {% endfor %}
+{% endif %}
+
+
+{% endblock %}

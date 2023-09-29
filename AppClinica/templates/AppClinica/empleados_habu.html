@@ -1,0 +1,24 @@
+{% extends "AppClinica/base.html" %}
+{% load static %}
+
+{% block sections %}
+<h1>Subir datos</h1>
+{% if form.errors %}
+<p>Estan mal los datos</p>
+{% endif %}
+
+<form action="" method="POST">{% csrf_token %}
+    <table>
+        {{ form.as_table }}
+    </table>
+
+    <input type="submit" value="Enviar">
+
+</form>
+<h1>Buscar datos con cargo</h1>
+<form action="/app/response/" method="GET">
+    <input type="cargo" name="cargo" id="cargo">
+
+    <input type="submit" value="Buscar">
+</form>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "AppClinica/base.html" %}
+{% load static %}
+
+{% block sections %}
+<h1>Empleados</h1>
+{% for empleado in empleados %}
+    <ul>
+        <li>Nombre: {{empleado.nombre}}</li>
+        <li>Apellido: {{empleado.apellido}}</li>
+        <li>Email: {{empleado.email}}</li>
+        <li>Cargo: {{empleado.cargo}}</li>
+    </ul>
+{% endfor %}
+{% endblock %}
