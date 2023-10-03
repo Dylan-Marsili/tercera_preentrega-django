@@ -27,6 +27,7 @@ python manage.py runserver
 
 ```
 **Paths:**
+ - /admin/                 **ADMIN**
  - /app/                   **Inicio**
  - /app/clientes/          **Muestra todos los clientes**
  - /app/clientes_habu/     **Hacer y buscar clientes**
